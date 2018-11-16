@@ -119,4 +119,35 @@ public class Story {
                 + "まあその人間に封印されかけていて1秒ごとに1ダメージを受けているというのが現状の私か…むなしいものだな。\n"
                 + "次へ進もう。▼");
     }
+    
+    public static void choice1(){
+    }
+    public static void 810(){
+    }
+    public static void stage1(){
+    }
+    public static void stage1After(){
+    }
+    public static void stage2(){
+    }
+    public static void stage2After(){
+    }
+    public static void choice2{ 
+    }
+    public static void choice3(){
+    }
+    public static void stage3(){
+    }
+    public static void stage3After(){
+    }
+    public static void security(){
+    }
+   　public static void lastBattle(){
+    }
+    public static void lastBattleAfter(){
+    }
+    public static void epilogue(){
+    }
+    public static void Special victory(){
+    }
 }
