@@ -110,6 +110,8 @@ public class TheDisaster {
             if (TwoChoices("1", "2").equals("2")) {
                 Story.specialVictory();
                 isGameEnd = true;
+                scan.close();
+                System.exit(0);
             }
         }
         Battle.BattleOfGrimgerde();
@@ -129,13 +131,13 @@ public class TheDisaster {
         heal_high = new Item("大回復", 60, ASCII_art.item());
         heal_veryHigh = new Item("特大回復", 200, ASCII_art.item());
 
-        weapon_bareHands = new Item("素手", 0,"");
-        weapon_knife = new Item("ナイフ", 10, ASCII_art.knife());
-        weapon_toyKnife = new Item("おもちゃのナイフ", 10, ASCII_art.toyknife());
-        weapon_fryingPanOfMagic = new Item("魔法のフライパン", 10, ASCII_art.frypan());
-        weapon_theElderWand = new Item("ニワトコの杖", 10, ASCII_art.elderwand());
+        weapon_bareHands = new Item("素手", 0, "");
+        weapon_knife = new Item("ナイフ", 50, ASCII_art.knife());
+        weapon_toyKnife = new Item("おもちゃのナイフ", 200, ASCII_art.toyknife());
+        weapon_fryingPanOfMagic = new Item("魔法のフライパン", 150, ASCII_art.frypan());
+        weapon_theElderWand = new Item("ニワトコの杖", 100, ASCII_art.elderwand());
         weapon_muskets = new Item("マスケット銃", 10, ASCII_art.musketgun());
-        weapon_waterGun = new Item("水鉄砲", 10, ASCII_art.watergun());
+        weapon_waterGun = new Item("水鉄砲", 250, ASCII_art.watergun());
 
         Disaster = new Character("", 1500, weapon_bareHands);
         grimgerde = new Grim("Grimgerde", 10000);
@@ -167,13 +169,13 @@ public class TheDisaster {
      */
     public static void PutDisasterName() {
         boolean roop = false;
-        while(!roop){
+        while (!roop) {
             //netbeans環境では入力された日本語は文字化けする？みたいです。cmd上では正常表示されます
             System.out.println("災害(主人公)の名前を入力してください");
             DisasterName = scan.nextLine();
-            
-            switch (DisasterName){
-                case "エクスシア" : 
+
+            switch (DisasterName) {
+                case "エクスシア":
                     System.out.println("\nお前に名を貸す義理も無ければ道理もない。\n");
                     continue;
                 case "スローネ":
@@ -207,14 +209,14 @@ public class TheDisaster {
                 case "オルトランド":
                     System.out.println("\nまだこのゲームをやってくれるのか？\n");
                     continue;
-                case "" : 
+                case "":
                     System.out.println("\n名前を入力してください\n");
                     continue;
             }
-               
-            System.out.println(DisasterName + " でよろしいですか? (y/n)");
 
-            if (TwoChoices("y", "n").equals("y")) {
+            System.out.println(DisasterName + " でよろしいですか? (1. はい | 2. いいえ)");
+
+            if (TwoChoices("1", "2").equals("1")) {
                 roop = true;
             }
         }
@@ -293,11 +295,12 @@ public class TheDisaster {
     public static void EquipWeapon(Item wepon) {
         String weponName = wepon.GetName();
 
-        System.out.println(weponName + "を装備しますか? (y/n) (現在の装備 : " + Disaster.getWepon().GetName() + ")");
+        System.out.println(weponName + "を装備しますか? (1. する | 2. しない) (現在の装備 : " + Disaster.getWepon().GetName() + ")");
 
-        if (TwoChoices("y", "n").equals("y")) {
+        if (TwoChoices("1", "2").equals("1")) {
             System.out.println(weponName + "を装備しました▼");
             System.out.println(wepon.GetAA());
+            Disaster.SetHP(-wepon.GetValue());
             Disaster.SetWepon(wepon);
 
             if (!hasGotWeapon_killWeapon) {
@@ -311,11 +314,11 @@ public class TheDisaster {
                     hasGotWeapon_killWeapon = true;
                 }
             }
-            
+
         } else {
             System.out.println(wepon.GetName() + "を装備しませんでした▼");
         }
-        
+
         scan.nextLine();
     }
 
@@ -325,9 +328,9 @@ public class TheDisaster {
      * @param healItem 回復アイテム
      */
     public static void Healer(Item healItem) {
-        System.out.println("体力を回復しますか? (y/n) (現在の体力 : " + Disaster.getHP() + ")");
+        System.out.println("体力を回復しますか? (1. する | 2. しない) (現在の体力 : " + Disaster.getHP() + ")");
 
-        if (TwoChoices("y", "n").equals("y")) {
+        if (TwoChoices("1", "2").equals("1")) {
             Disaster.SetHP(healItem.GetValue());
 
             System.out.println("体力を回復しました\n"
