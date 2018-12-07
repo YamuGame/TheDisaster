@@ -389,9 +389,9 @@ public class ASCII_art {
 
     public static String mail() {
         return ""
-                + "????\n"
-                + "????\n"
-                + "????\n"
+        +"┌─────┐\n"
+        +"│＼★／│\n"
+        +"└─────┘\n"
                 + "\n";
     }
 }
