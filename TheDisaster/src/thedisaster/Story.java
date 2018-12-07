@@ -12,7 +12,7 @@ public class Story {
     public static void Openning() {
         System.out.println(""
                 + "※このゲームではフルスクリーンを推奨しています。\n"
-                + "※最大化、あるいはF11キーでフルスクリーンにすることで、よりゲームを楽しめます。\n"
+                + "※最大化、あるいはF11キーでフルスクリーンにすることで、よりゲームを楽しめます。"
                 + "※また、文の最後に「▼」が表示されている場合、Enterキーで次に進みます。▼");
         scan.nextLine();
 
@@ -837,8 +837,33 @@ public class Story {
         System.out.println(""
                 + "で、\n"
                 + "そんなあんたが何をしにここに来た？▼");
-        scan.nextLine();
+        System.out.println(""
+                + "１．あんたを倒すため\n"
+                + "２．ヴァルキリーの目的は？\n"
+                + "３．あんたは何者なのか？\n"
+                + "４．殺して欲しい");
+        boolean roop = false;
+        while (!roop) {
+        String sentakusi = scan.nextLine();
+        switch (sentakusi) {
+                case "1":
+                    Senpai1();
+                break;
+                case "2":
+                    Senpai2();
+                break;
+                case "3":
+                    Senpai3();
+                break;
+                case "4":
+                    Senpai4();
+                break;
+                defalt:
+                System.out.println("こんなのも選べないの？そんなんじゃ甘いよ")
+                    break;
     }
+                roop = true;
+}
 
     public static void Senpai1() {
         System.out.println(""
