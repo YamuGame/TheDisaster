@@ -212,6 +212,9 @@ public class TheDisaster {
                 case "":
                     System.out.println("\n名前を入力してください\n");
                     continue;
+                case "8101919114514":
+                    Story.Senpai(); //エンディング
+                    continue;
             }
 
             System.out.println(DisasterName + " でよろしいですか? (1. はい | 2. いいえ)");
