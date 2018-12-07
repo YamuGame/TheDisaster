@@ -149,7 +149,7 @@ public class Battle {
                     return "物理攻撃";
                 } else if (GrimRandom >= 67) {
                     physicalInvalidConunt++;
-                    return "";
+                    return "シールド";
                 } else {
                     return "魔法攻撃";
                 }
