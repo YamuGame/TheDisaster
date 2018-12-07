@@ -590,6 +590,8 @@ public class Story {
                 + "戦乙女は二本の剣を構えた。\n"
                 + "刀身が黄昏の光をたたえている。▼");
         scan.nextLine();
+        String AA = ASCII_art.grimgridle();
+        System.out.println(AA);
         System.out.println(""
                 + "グリムゲルデ「さようなら」\n"
                 + "これが最後の戦いだ▼");
