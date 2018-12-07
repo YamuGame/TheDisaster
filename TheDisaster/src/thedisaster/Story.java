@@ -11,9 +11,9 @@ public class Story {
 
     public static void Openning() {
         System.out.println(""
-                + "※このゲームではフルスクリーンを推奨しています\n"
-                + "※最大化、あるいはF11キーでフルスクリーンにすることで、よりゲームを楽しめます"
-                + "また、文の最後に「▼」が表示されている場合、Enterキーで次に進みます▼");
+                + "※このゲームではフルスクリーンを推奨しています。\n"
+                + "※最大化、あるいはF11キーでフルスクリーンにすることで、よりゲームを楽しめます。"
+                + "※また、文の最後に「▼」が表示されている場合、Enterキーで次に進みます。▼");
         scan.nextLine();
 
         System.out.print(""
@@ -590,7 +590,7 @@ public class Story {
                 + "戦乙女は二本の剣を構えた。\n"
                 + "刀身が黄昏の光をたたえている。▼");
         scan.nextLine();
-        String AA = ASCII_art.grimgridle();
+        AA = ASCII_art.grimgridle();
         System.out.println(AA);
         System.out.println(""
                 + "グリムゲルデ「さようなら」\n"
