@@ -122,6 +122,8 @@ public class Story {
     }
 
     public static void choice1() {
+        String AA = ASCII_art.door();
+        System.out.println(AA);
         System.out.println("「選択１」▼");
         scan.nextLine();
 
@@ -145,6 +147,8 @@ public class Story {
     }
 
     public static void specialenpai() {
+        String AA = ASCII_art.door();
+        System.out.println(AA);
         System.out.println("「810」▼");
         scan.nextLine();
 
@@ -183,6 +187,8 @@ public class Story {
     }
 
     public static void stage1() {
+        String AA = ASCII_art.door();
+        System.out.println(AA);
         System.out.println("「戦闘１」▼");
         scan.nextLine();
 
@@ -269,6 +275,8 @@ public class Story {
     }
 
     public static void stage2() {
+        String AA = ASCII_art.door();
+        System.out.println(AA);
         System.out.println("「戦闘ステージ２」▼");
         scan.nextLine();
 
@@ -342,6 +350,8 @@ public class Story {
     }
 
     public static void choice2() {
+        String AA = ASCII_art.door();
+        System.out.println(AA);
         System.out.println("「選択ステージ２」▼");
         scan.nextLine();
 
@@ -378,6 +388,8 @@ public class Story {
     }
 
     public static void choice3() {
+        String AA = ASCII_art.door();
+        System.out.println(AA);
         System.out.println("「選択ステージ３」▼");
         scan.nextLine();
 
@@ -415,6 +427,8 @@ public class Story {
     }
 
     public static void stage3() {
+        String AA = ASCII_art.door();
+        System.out.println(AA);
         System.out.println("「戦闘ステージ３」▼");
         scan.nextLine();
 
@@ -519,6 +533,8 @@ public class Story {
     }
 
     public static void security() {
+        String AA = ASCII_art.door();
+        System.out.println(AA);
         System.out.println("「セキュリティステージ」▼");
         scan.nextLine();
 
@@ -537,6 +553,8 @@ public class Story {
     }
 
     public static void lastBattle() {
+        String AA = ASCII_art.door();
+        System.out.println(AA);
         System.out.println("「ラストステージ」▼");
         scan.nextLine();
 
