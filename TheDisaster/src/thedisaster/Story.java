@@ -642,6 +642,8 @@ public class Story {
                 + "\n"
                 + "▼");
         scan.nextLine();
+        String AA = ASCII_art.mail();
+        System.out.println(AA);
         System.out.println(""
                 + "\n"
                 + "(メッセージを受信しました。)▼");
